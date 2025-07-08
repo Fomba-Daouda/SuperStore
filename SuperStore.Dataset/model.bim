@@ -1,0 +1,511 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.124.1052.0 (23.12)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Superstore\",\"KPI\",\"TOP\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "fr-FR",
+    "cultures": [
+      {
+        "name": "fr-FR",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "KPI",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "expression": [
+          "let",
+          "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#\"Colonne 1\" = _t]),",
+          "    #\"Type modifié\" = Table.TransformColumnTypes(Source,{{\"Colonne 1\", type text}}),",
+          "    #\"Colonnes supprimées\" = Table.RemoveColumns(#\"Type modifié\",{\"Colonne 1\"})",
+          "in",
+          "    #\"Colonnes supprimées\""
+        ],
+        "kind": "m",
+        "lineageTag": "50425c67-33f4-47a3-bc87-43313502c58f"
+      }
+    ],
+    "sourceQueryCulture": "fr-FR",
+    "tables": [
+      {
+        "name": "Superstore",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ID Commande",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d26f2b6b-b860-485b-9e96-d4a852fdaad0",
+            "sourceColumn": "ID Commande",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Date Commande",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "f936cd65-71a1-448c-a470-c24a171a202b",
+            "sourceColumn": "Date Commande",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Mode Expedition",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3eaf89af-dd8f-4468-9086-77be7166d956",
+            "sourceColumn": "Mode Expedition",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ID Client",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "5442cc7c-a490-4d2a-be72-7cf202bcb3b6",
+            "sourceColumn": "ID Client",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Nom Client",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6d45caa3-6fa2-46cf-a7ef-6fb9db080bf6",
+            "sourceColumn": "Nom Client",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Segment",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "dc6d6103-8bf0-4acf-84f5-4ccc73bdedea",
+            "sourceColumn": "Segment",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Pays",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "15b6567e-42a0-42e5-a436-af5e87768858",
+            "sourceColumn": "Pays",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Ville",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "969ebf2a-f3e8-45c2-9b51-d26ec1d617bf",
+            "sourceColumn": "Ville",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Etat",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "14bb55d6-58b2-4791-968f-65589304ddcf",
+            "sourceColumn": "Etat",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Code Postal",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "1855367b-c95e-44d9-8df0-bee402173087",
+            "sourceColumn": "Code Postal",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Region",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b130a862-c258-48e5-9a50-086d868f6e21",
+            "sourceColumn": "Region",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ID Produit",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0a975fa4-900f-44dc-b47f-273058f8b721",
+            "sourceColumn": "ID Produit",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Categorie",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9dd1051f-2d47-49f1-81c7-7551eb3f1dc1",
+            "sourceColumn": "Categorie",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Sous-Categorie",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "41fffab6-cb48-4d76-b443-e10f4c3c00fc",
+            "sourceColumn": "Sous-Categorie",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Nom Produit",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "91969658-c52f-4f94-81f1-3e090187329a",
+            "sourceColumn": "Nom Produit",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Ventes",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "lineageTag": "09906e6b-dc9d-4d27-80d3-84fcf0a3cd42",
+            "sourceColumn": "Ventes",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Quantité",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "9970ee74-ff38-45a5-b916-50cba3721d5a",
+            "sourceColumn": "Quantité",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Discount",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3bf034dd-df89-47ac-b3e2-cbf9a5b36e56",
+            "sourceColumn": "Discount",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Profit",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "lineageTag": "6a3c39f1-e4a2-4483-863f-2a2c8dc77160",
+            "sourceColumn": "Profit",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Date Expedition",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "d17d0488-8853-4d94-9d97-46dbf0343c74",
+            "sourceColumn": "Date Expedition",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "b30ef43f-567e-4707-8520-78ee937eeb76",
+        "measures": [
+          {
+            "name": "Top Profit",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    SUM(Superstore[Profit]), ",
+              "    KEEPFILTERS(",
+              "        TOPN(",
+              "           SELECTEDVALUE('TOP'[Nombre]), ",
+              "            SUMMARIZE(",
+              "                ALLSELECTED(Superstore), ",
+              "                Superstore[Nom Produit],  // Regroupement par produit",
+              "                \"TotalProfit\", SUM(Superstore[Profit])  // Calcul du profit total pour chaque produit",
+              "            ),",
+              "            [TotalProfit],  // Tri par le total du profit",
+              "            DESC  // Ordre décroissant (du plus élevé au plus bas profit)",
+              "        )",
+              "    )",
+              ")"
+            ],
+            "lineageTag": "ecf804ce-df44-4191-b1a1-da3e1a1717af"
+          },
+          {
+            "name": "Top CA",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    SUM(Superstore[Ventes]), ",
+              "    KEEPFILTERS(",
+              "        TOPN(",
+              "           SELECTEDVALUE('TOP'[Nombre]), ",
+              "            SUMMARIZE(",
+              "                ALLSELECTED(Superstore), ",
+              "                Superstore[Nom Produit],  // Regroupement par produit",
+              "                \"TotalCA\", SUM(Superstore[Ventes])  // Calcul du profit total pour chaque produit",
+              "            ),",
+              "            [TotalCA],  // Tri par le total du profit",
+              "            DESC  // Ordre décroissant (du plus élevé au plus bas profit)",
+              "        )",
+              "    )",
+              ")"
+            ],
+            "lineageTag": "1350a39c-7f5d-4ff3-9d9c-9bb586ea486e"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Superstore",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(\"C:\\Users\\Daouda\\Downloads\\Sample - Superstore.csv\"),[Delimiter=\",\", Columns=21, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    #\"En-têtes promus\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Type modifié\" = Table.TransformColumnTypes(#\"En-têtes promus\",{{\"Row ID\", Int64.Type}, {\"Order ID\", type text}, {\"Order Date\", type text}, {\"Ship Date\", type text}, {\"Ship Mode\", type text}, {\"Customer ID\", type text}, {\"Customer Name\", type text}, {\"Segment\", type text}, {\"Country\", type text}, {\"City\", type text}, {\"State\", type text}, {\"Postal Code\", Int64.Type}, {\"Region\", type text}, {\"Product ID\", type text}, {\"Category\", type text}, {\"Sub-Category\", type text}, {\"Product Name\", type text}, {\"Sales\", type text}, {\"Quantity\", Int64.Type}, {\"Discount\", type text}, {\"Profit\", type text}}),",
+                "    #\"Colonnes supprimées\" = Table.RemoveColumns(#\"Type modifié\",{\"Row ID\"}),",
+                "    #\"Colonnes renommées\" = Table.RenameColumns(#\"Colonnes supprimées\",{{\"Order ID\", \"ID Commande\"}, {\"Order Date\", \"Date Commande\"}, {\"Ship Date\", \"Date Expedition\"}, {\"Ship Mode\", \"Mode Expedition\"}, {\"Customer ID\", \"ID Client\"}, {\"Customer Name\", \"Name Client\"}, {\"Country\", \"Pays\"}, {\"City\", \"Ville\"}, {\"State\", \"Etat\"}, {\"Postal Code\", \"Code Postal\"}, {\"Product ID\", \"ID Produit\"}, {\"Category\", \"Categorie\"}, {\"Sub-Category\", \"Sous-Categorie\"}, {\"Product Name\", \"Nom Produit\"}, {\"Sales\", \"Ventes\"}, {\"Quantity\", \"Quantité\"}}),",
+                "    #\"Personnalisée ajoutée\" = Table.AddColumn(#\"Colonnes renommées\", \"Personnalisé\", each Date.FromText([Date Commande],\"en-US\")),",
+                "    #\"Colonnes supprimées1\" = Table.RemoveColumns(#\"Personnalisée ajoutée\",{\"Date Commande\"}),",
+                "    #\"Colonnes renommées1\" = Table.RenameColumns(#\"Colonnes supprimées1\",{{\"Personnalisé\", \"Date Commande\"}}),",
+                "    #\"Colonnes permutées\" = Table.ReorderColumns(#\"Colonnes renommées1\",{\"ID Commande\", \"Date Commande\", \"Date Expedition\", \"Mode Expedition\", \"ID Client\", \"Name Client\", \"Segment\", \"Pays\", \"Ville\", \"Etat\", \"Code Postal\", \"Region\", \"ID Produit\", \"Categorie\", \"Sous-Categorie\", \"Nom Produit\", \"Ventes\", \"Quantité\", \"Discount\", \"Profit\"}),",
+                "    #\"Type modifié1\" = Table.TransformColumnTypes(#\"Colonnes permutées\",{{\"Date Commande\", type date}}),",
+                "    #\"Personnalisée ajoutée1\" = Table.AddColumn(#\"Type modifié1\", \"Date Expedition.1\", each Date.FromText([Date Expedition],\"en-US\")),",
+                "    #\"Type modifié2\" = Table.TransformColumnTypes(#\"Personnalisée ajoutée1\",{{\"Date Expedition\", type date}}),",
+                "    #\"Colonnes supprimées2\" = Table.RemoveColumns(#\"Type modifié2\",{\"Date Expedition\"}),",
+                "    #\"Type modifié3\" = Table.TransformColumnTypes(#\"Colonnes supprimées2\",{{\"Date Expedition.1\", type date}}),",
+                "    #\"Colonnes renommées2\" = Table.RenameColumns(#\"Type modifié3\",{{\"Date Expedition.1\", \"Date Expedition\"}}),",
+                "    #\"Valeur remplacée\" = Table.ReplaceValue(#\"Colonnes renommées2\",\".\",\",\",Replacer.ReplaceText,{\"Ventes\"}),",
+                "    #\"Type modifié4\" = Table.TransformColumnTypes(#\"Valeur remplacée\",{{\"Ventes\", type number}}),",
+                "    #\"Valeur remplacée1\" = Table.ReplaceValue(#\"Type modifié4\",\".\",\",\",Replacer.ReplaceText,{\"Profit\"}),",
+                "    #\"Type modifié5\" = Table.TransformColumnTypes(#\"Valeur remplacée1\",{{\"Profit\", type number}}),",
+                "    #\"Texte extrait avant le délimiteur\" = Table.TransformColumns(#\"Type modifié5\", {{\"Nom Produit\", each Text.BeforeDelimiter(_, \" \", 1), type text}}),",
+                "    #\"Colonnes renommées3\" = Table.RenameColumns(#\"Texte extrait avant le délimiteur\",{{\"Name Client\", \"Nom Client\"}})",
+                "in",
+                "    #\"Colonnes renommées3\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "TOP",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Nombre",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "bcb6eb24-e669-4217-9955-d2ce9466efa4",
+            "sourceColumn": "Nombre",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "3bbcba40-9b67-47b1-acb8-661dd1c78295",
+        "measures": [
+          {
+            "name": "Titres",
+            "expression": "\"Analyse des ventes des produits :\" & UNICHAR(10) & SELECTEDVALUE(Superstore[Etat], \"Tous les États\")",
+            "lineageTag": "edb6ddf9-a74e-4d84-a124-768fa6158b41"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "TOP",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i45WMlKK1YlWMgaTpmDS0ABCAXmxAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#\"Colonne 1\" = _t]),",
+                "    #\"Type modifié\" = Table.TransformColumnTypes(Source,{{\"Colonne 1\", Int64.Type}}),",
+                "    #\"Colonnes renommées\" = Table.RenameColumns(#\"Type modifié\",{{\"Colonne 1\", \"Nombre\"}})",
+                "in",
+                "    #\"Colonnes renommées\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
